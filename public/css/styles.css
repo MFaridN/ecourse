@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFCF4;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: rgba(252, 236, 221, 0.5);
+    padding: 15px 40px;
+}
+.navbar-nav .nav-link {
+    font-weight: 600;
+    margin-right: 20px;
+    color: #0F0F0F;
+}
+.nav-link {
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 6px 15px;
+    color: #0F0F0F;
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.show {
+    background-color: #E36C07;
+    color: #fff !important;
+}
+
+/* Tombol umum */
+.btn-nav {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 600;
+    border: 1px solid #E36C07;
+}
+
+.btn-nav:hover {
+    background-color: #E36C07;
+    color: #fff !important;
+}
+
+/* .btn-orange {
+    background-color: #E36C07;
+    color: #fff !important;
+}
+.btn-orange:hover {
+    background-color: #cc5a06;
+}
+.btn-light-custom {
+    background-color: #FCECDD;
+    color: #0F0F0F;
+}
+.btn-light-custom:hover {
+    background-color: #f5d4bb;
+} */
+/* Footer */
+.footer {
+    background-color: rgba(255, 147, 45, 0.5);
+    color: #000000;
+    padding: 40px 0 20px;
+}
+.footer h6 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.footer a {
+    color: #000000;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #000000;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ===== Layout Global ===== */
+main.content-wrapper {
+    padding-top: 80px;   /* jarak dengan navbar */
+    padding-bottom: 80px; /* jarak dengan footer */
+}
+
+/* Halaman khusus login (no-padding) */
+body.no-padding main.content-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* ===== Login Page ===== */
+.login-wrapper {
+    min-height: 50vh;
+    background: #fdfaf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-login {
+    max-width: 950px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.switch-btn {
+    border-radius: 24px;
+    margin: 0px 40px;
+    background-color: rgba(252, 236, 221, 0.6);
+    padding: 4px 5px;
+    font-weight: 600;
+    border: 0.5px solid #ddd;
+    
+}
+.btn-tab {
+    margin: 0;
+    color: #000000;
+    border-radius: 24px;
+}
+.btn-tab:hover {
+    background-color: #E36C07;
+    color: #fff !important;
+}
+/* Input */
+.custom-input {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+.custom-input:focus {
+    border-color: #f47b20;
+    box-shadow: 0 0 5px rgba(244, 123, 32, 0.4);
+}
+
+
+.btn-google {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-google:hover {
+    background: #f1f1f1;
+}
