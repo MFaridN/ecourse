@@ -26,33 +26,30 @@ body {
     color: #fff !important;
 }
 
-/* Tombol umum */
+/* btn login */
 .btn-nav {
     border-radius: 25px;
     padding: 8px 20px;
     font-weight: 600;
-    border: 1px solid #E36C07;
+    color: #E36C07 ;
 }
-
 .btn-nav:hover {
     background-color: #E36C07;
-    color: #fff !important;
+    color: #fff ;
 }
 
-/* .btn-orange {
-    background-color: #E36C07;
-    color: #fff !important;
+/* Icon Cart Navbar */
+.navbar-cart {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
 }
-.btn-orange:hover {
-    background-color: #cc5a06;
+
+@media (max-width: 991px) {
+    .navbar-cart {
+        margin: 10px 12px; 
+    }
 }
-.btn-light-custom {
-    background-color: #FCECDD;
-    color: #0F0F0F;
-}
-.btn-light-custom:hover {
-    background-color: #f5d4bb;
-} */
 /* Footer */
 .footer {
     background-color: rgba(255, 147, 45, 0.5);
@@ -89,7 +86,7 @@ main.content-wrapper {
     padding-bottom: 80px; /* jarak dengan footer */
 }
 
-/* Halaman khusus login (no-padding) */
+/* Halaman khusus (no-padding) */
 body.no-padding main.content-wrapper {
     padding-top: 0;
     padding-bottom: 0;
@@ -110,19 +107,22 @@ body.no-padding main.content-wrapper {
     border-radius: 16px;
     overflow: hidden;
 }
+
 .switch-btn {
     border-radius: 24px;
-    margin: 0px 40px;
-    background-color: rgba(252, 236, 221, 0.6);
+    width: 250px;
+    background-color: rgba(244, 123, 32, 0.6);
     padding: 4px 5px;
-    font-weight: 600;
     border: 0.5px solid #ddd;
-    
+    display: flex;
+    justify-content: space-between; /* biar tombol rata */
+    margin: 0 auto 20px auto; /* center + jarak bawah */
 }
 .btn-tab {
     margin: 0;
-    color: #000000;
+    /* color: #000000; */
     border-radius: 24px;
+    color: #fff !important
 }
 .btn-tab:hover {
     background-color: #E36C07;
@@ -139,15 +139,26 @@ body.no-padding main.content-wrapper {
     box-shadow: 0 0 5px rgba(244, 123, 32, 0.4);
 }
 
-
-.btn-google {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: 0.3s;
+/* Btn global */
+.btn-global {
+    border-radius: 24px;
+    background-color: #E36C07;
+    color: #fff !important;
+}
+.btn-global:hover {
+    background-color: #cc5a06;
 }
 
-.btn-google:hover {
-    background: #f1f1f1;
+.btn-light {
+    background: #fff;
+    border: 1px solid #E36C07;
+    border-radius: 24px;
+    font-weight: 500;
+    transition: 0.3s;
+    color: #E36C07 ;
+}
+
+.btn-light:hover {
+    background-color: #E36C07;
+    color: #fff ;
 }

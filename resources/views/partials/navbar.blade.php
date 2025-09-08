@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-custom">
+<nav class="carrd navbar navbar-expand-lg navbar-custom shadow">
     <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="#">
@@ -31,14 +31,13 @@
             </ul>
 
             <!-- Icon Chart -->
-            <a class="me-3" href="#">
+            <a class="navbar-brand navbar-cart" href="#">
                 <img src="{{ asset('images/Shopping_cart.svg') }}" alt="Chart" height="24">
             </a>
-
             <!-- Tombol -->
             <div class="d-flex">
-                <a href="#" class="btn btn-nav btn-nav me-2">Masuk</a>
-                <a href="#" class="btn btn-nav">Daftar</a>
+                <a href="#" class="btn btn-nav btn-nav me-2 shadow border-0">Masuk</a>
+                <a href="#" class="btn btn-nav shadow border-0">Daftar</a>
             </div>
         </div>
     </div>

@@ -19,9 +19,9 @@
                 <h3 class="text-center fw-bold mb-4">Halo Sobat Nusantara 👋</h3>
 
                 <!-- Tab Masuk / Daftar -->
-                <div class="d-flex justify-content-center mb-4 switch-btn">
-                    <button class="btn btn-tab me-2 px-4">Masuk</button>
-                    <button class="btn btn-tab px-4">Daftar</button>
+                <div class="switch-btn mx-auto">
+                    <button class="btn btn-tab flex-fill me-1">Masuk</button>
+                    <button class="btn btn-tab flex-fill">Daftar</button>
                 </div>
 
                 <!-- Form Login -->
@@ -35,13 +35,13 @@
                         <a href="#" class="small position-absolute end-0 top-50 translate-middle-y me-3 text-orange">Lupa Password?</a>
                     </div>
                     <div class="d-grid mb-3">
-                        <button type="submit" class="btn btn-orange">Masuk</button>
+                        <button type="submit" class="btn btn-global">Masuk</button>
                     </div>
                     <div class="text-center mb-3">
                         <span class="text-muted">Atau</span>
                     </div>
                     <div class="d-grid">
-                        <button type="button" class="btn btn-google">
+                        <button type="button" class="btn btn-light">
                             <i class="bi bi-google me-2"></i> Masuk Dengan Google
                         </button>
                     </div>
