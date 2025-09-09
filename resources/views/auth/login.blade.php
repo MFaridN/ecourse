@@ -1,12 +1,12 @@
 @extends('layouts.app')
-@section('body-class', 'no-padding') {{-- kasih class no-padding supaya hilang jarak --}}
+@section('body-class', 'no-padding')
 
 @section('content')
-<div class="login-wrapper">
-    <div class="card card-login shadow border-0">
+<div class="auth-wrapper">
+    <div class="card auth-card shadow border-0">
         <div class="row g-0">
 
-            <!-- Bagian Gambar (50%) -->
+            <!-- Gambar -->
             <div class="col-md-6 d-none d-md-block">
                 <img src="{{ asset('images/login.png') }}" 
                      alt="Login Image" 
@@ -14,25 +14,29 @@
                      style="object-fit: cover;">
             </div>
 
-            <!-- Bagian Form (50%) -->
+            <!-- Form -->
             <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
                 <h3 class="text-center fw-bold mb-4">Halo Sobat Nusantara 👋</h3>
 
-                <!-- Tab Masuk / Daftar -->
-                <div class="switch-btn mx-auto">
-                    <button class="btn btn-tab flex-fill me-1">Masuk</button>
-                    <button class="btn btn-tab flex-fill">Daftar</button>
+                <!-- Tab -->
+                <div class="auth-switch mx-auto">
+                    <a href="{{ route('login') }}" class="btn auth-tab flex-fill me-1 active">Masuk</a>
+                    <a href="{{ route('register') }}" class="btn auth-tab flex-fill">Daftar</a>
                 </div>
-
+                <p class="auth-subtitle">
+                    Silahkan melakukan login untuk menjelajahi Dunia Academy Nusantara!
+                </p>                
                 <!-- Form Login -->
-                <form action="{{ route('login') }}" method="POST">
+                <form action="{{ route('login') }}" method="POST" class="auth-form">
                     @csrf
                     <div class="mb-3">
-                        <input type="email" class="form-control custom-input" name="email" placeholder="Masukan Email Anda" required>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control auth-input" name="email" placeholder="Masukan Email Anda" required>
                     </div>
                     <div class="mb-3 position-relative">
-                        <input type="password" class="form-control custom-input" name="password" placeholder="Masukan Password Anda" required>
-                        <a href="#" class="small position-absolute end-0 top-50 translate-middle-y me-3 text-orange">Lupa Password?</a>
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control auth-input" name="password" placeholder="Masukan Password Anda" required>
+                        <a href="{{ asset('forgot-password') }}" class="small end-0 top-50 translate-middle-y me-3 text-orange">Lupa Password?</a>
                     </div>
                     <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-global">Masuk</button>

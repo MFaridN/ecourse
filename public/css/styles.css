@@ -1,18 +1,53 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFFCF4;
+    padding-top: 0 !important;
+}
+/* Pastikan main langsung nempel navbar */
+main.content-wrapper {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Hilangkan margin default di hero-wrapper */
+.hero-wrapper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.hero-img {
+    /* border-radius: 0 0 8px 8px; */
 }
 
 /* Navbar */
 .navbar-custom {
     background-color: rgba(252, 236, 221, 0.5);
     padding: 15px 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* default shadow */
+    transition: box-shadow 0.3s ease-in-out;   /* halus saat berubah */
+}
+.navbar-shadow-medium {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .navbar-nav .nav-link {
     font-weight: 600;
     margin-right: 20px;
     color: #0F0F0F;
 }
+
+.navbar .dropdown-toggle::after {
+    display: none; /* hilangkan caret default */
+}
+
+.navbar .profile-icon {
+    color: #E36C07 ;
+}
+.navbar .profile-icon:hover,
+.navbar .profile-icon:focus{
+    color: #cc5a06 ;
+    transform: scale(1.1);
+}
+
 .nav-link {
     font-weight: 600;
     border-radius: 8px;
@@ -26,11 +61,37 @@ body {
     color: #fff !important;
 }
 
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-menu {
+    background-color: rgba(252, 236, 221, 0.9); 
+    border-radius: 8px; 
+    font-weight: 600;
+}
+.dropdown-item {
+    font-weight: 500;
+}
+
+.dropdown-item:hover, 
+.dropdown-item:focus {
+    background-color: #E36C07; 
+    color: #fff; 
+}
+
 /* btn login */
 .btn-nav {
     border-radius: 25px;
     padding: 8px 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: #E36C07 ;
 }
 .btn-nav:hover {
@@ -40,10 +101,16 @@ body {
 
 /* Icon Cart Navbar */
 .navbar-cart {
-    margin-left: 40px;
-    display: flex;
+    margin-right: 24px; 
+    display: flex; 
     align-items: center;
 }
+
+.navbar-cart:hover,
+.navbar-cart:focus {
+    transform: scale(1.1);
+}
+
 
 @media (max-width: 991px) {
     .navbar-cart {
@@ -70,7 +137,8 @@ body {
 .footer .social-icons a {
     margin-right: 10px;
     font-size: 20px;
-    color: #000000;
+    /* color: #000000; */
+    color: #cc5a06;
 }
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.3);
@@ -92,8 +160,8 @@ body.no-padding main.content-wrapper {
     padding-bottom: 0;
 }
 
-/* ===== Login Page ===== */
-.login-wrapper {
+/* ===== Auth Wrapper (Login/Daftar/Reset/Lupa Password) ===== */
+.auth-wrapper {
     min-height: 50vh;
     background: #fdfaf6;
     display: flex;
@@ -101,58 +169,101 @@ body.no-padding main.content-wrapper {
     justify-content: center;
 }
 
-.card-login {
+.auth-card {
     max-width: 950px;
     width: 100%;
     border-radius: 16px;
     overflow: hidden;
 }
 
-.switch-btn {
+.auth-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #6c6c6c;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Tab switch (Masuk / Daftar) */
+.auth-switch {
     border-radius: 24px;
     width: 250px;
     background-color: rgba(244, 123, 32, 0.6);
     padding: 4px 5px;
     border: 0.5px solid #ddd;
     display: flex;
-    justify-content: space-between; /* biar tombol rata */
-    margin: 0 auto 20px auto; /* center + jarak bawah */
+    justify-content: space-between;
+    margin: 0 auto 20px auto;
 }
-.btn-tab {
+.auth-tab {
     margin: 0;
-    /* color: #000000; */
     border-radius: 24px;
-    color: #fff !important
+    color: #fff;
+    border: none;
 }
-.btn-tab:hover {
+.auth-tab:hover,
+.auth-tab.active {
     background-color: #E36C07;
-    color: #fff !important;
+    color: #fff ;
 }
+
+/* Label input */
+.auth-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
 /* Input */
-.custom-input {
+.auth-input {
     border-radius: 10px;
     padding: 12px;
     border: 1px solid #ddd;
 }
-.custom-input:focus {
+.auth-input:focus {
     border-color: #f47b20;
     box-shadow: 0 0 5px rgba(244, 123, 32, 0.4);
+}
+
+.auth-input::placeholder {
+  color: rgba(0,0,0,0.4);
+}
+
+/* Text back to login */
+.auth-text-back {
+    color: #E36C07 !important;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+.auth-text-back:hover {
+    color: #cc5a06 !important;
+    text-decoration: underline;
 }
 
 /* Btn global */
 .btn-global {
     border-radius: 24px;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 500;
     background-color: #E36C07;
     color: #fff !important;
 }
 .btn-global:hover {
     background-color: #cc5a06;
+    transform: translateY(-0.5px);
 }
 
 .btn-light {
     background: #fff;
     border: 1px solid #E36C07;
     border-radius: 24px;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
     font-weight: 500;
     transition: 0.3s;
     color: #E36C07 ;
@@ -161,4 +272,14 @@ body.no-padding main.content-wrapper {
 .btn-light:hover {
     background-color: #E36C07;
     color: #fff ;
+}
+
+.input-group .btn-global {
+    width: auto;   /* biar tombol ikut sejajar input */
+    border-radius: 0 12px 12px 0; /* radius hanya di sisi kanan */
+    padding: 0 20px;
+}
+
+.input-group .auth-input {
+    border-radius: 12px 0 0 12px; /* radius hanya di sisi kiri */
 }
